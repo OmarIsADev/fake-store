@@ -8,7 +8,7 @@ function Search({ className }: { className?: string }) {
       classNames={{ wrapper: className }}
       placeholder="Search Products"
       Suffix={
-        <Button className="rounded-full" size="icon">
+        <Button className="rounded-full bg-primary/40" size="icon">
           <SearchIcon size={16} />
         </Button>
       }

@@ -111,9 +111,9 @@ function Navbar() {
         <div className="flex items-center gap-2 sm:gap-4">
           <Search className="hidden lg:flex" />
 
-          <div className="bg-secondary/30 flex gap-1 rounded-lg">
+          <div className="bg-primary/30 flex gap-1 rounded-lg">
             <Button
-              variant="secondary"
+              variant="primary"
               className="bg-transparent"
               title="Cart"
               size="icon"
@@ -121,12 +121,12 @@ function Navbar() {
               <ShoppingBag className="w-5 h-5 text-text/80" />
             </Button>
 
-            <div className="grow my-1 w-px bg-secondary/40" />
+            <div className="grow my-1 w-px bg-primary/40" />
 
             <Dropdown>
               <DropdownTrigger>
                 <Button
-                  variant="secondary"
+                  variant="primary"
                   className="transition-colors bg-transparent"
                   onClick={() => setIsProfileOpen(!isProfileOpen)}
                   title="Account"
