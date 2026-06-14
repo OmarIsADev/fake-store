@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { ShoppingBag, User, Menu, X, ChevronDown } from "lucide-react";
 import Button from "../ui/button";
-import Search from "./search";
 import { cn } from "@sglara/cn";
 import Dropdown, {
   DropdownContent,
@@ -109,8 +108,6 @@ function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2 sm:gap-4">
-          <Search className="hidden lg:flex" />
-
           <div className="bg-primary/30 flex gap-1 rounded-lg">
             <Button
               variant="primary"
@@ -146,9 +143,9 @@ function Navbar() {
 
           {/* Mobile Menu Hamburger */}
           <Button
-            variant="secondary"
+            variant="primary"
             size="icon"
-            className="md:hidden transition-colors"
+            className="md:hidden bg-primary/30 transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
@@ -163,9 +160,6 @@ function Navbar() {
       {/* Mobile Navigation Panel */}
       {isMobileMenuOpen && (
         <div className="md:hidden border-t border-secondary/10 bg-background/95 backdrop-blur-md py-4 px-6 animate-in slide-in-from-top duration-300">
-          <div className="mb-4">
-            <Search />
-          </div>
           <nav className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
