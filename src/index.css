@@ -21,7 +21,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --text: #f2f8f2;
     --background: #050b05;
@@ -29,7 +29,7 @@
     --secondary: #235e22;
     --accent: #2e8c2c;
   }
-}
+} */
 
 @theme {
   --color-text: var(--text);
