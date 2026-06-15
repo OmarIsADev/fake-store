@@ -60,7 +60,6 @@ export const DropdownTrigger = ({
     return cloneElement(children, {
       ...(children.props as React.PropsWithChildren<any>),
       onClick: handleOnClick,
-      className: cn((children.props as { className?: string }).className),
     });
   else return <Button onClick={handleOnClick}>{children}</Button>;
 };
