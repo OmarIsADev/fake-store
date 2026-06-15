@@ -66,15 +66,15 @@ const SkeletonGrid = () => (
     {Array.from({ length: 8 }).map((_, idx) => (
       <div
         key={idx}
-        className="bg-white/40 dark:bg-black/20 border border-secondary/10 rounded-2xl p-4 animate-pulse"
+        className="bg-white/40 border border-secondary/10 rounded-2xl p-4 animate-pulse"
       >
-        <div className="aspect-square bg-secondary/10 dark:bg-secondary/5 rounded-xl mb-4" />
-        <div className="h-4 bg-secondary/20 dark:bg-secondary/10 rounded w-1/3 mb-2" />
-        <div className="h-6 bg-secondary/20 dark:bg-secondary/10 rounded w-3/4 mb-3" />
-        <div className="h-4 bg-secondary/20 dark:bg-secondary/10 rounded w-1/2 mb-4" />
+        <div className="aspect-square bg-secondary/10 rounded-xl mb-4" />
+        <div className="h-4 bg-secondary/20 rounded w-1/3 mb-2" />
+        <div className="h-6 bg-secondary/20 rounded w-3/4 mb-3" />
+        <div className="h-4 bg-secondary/20 rounded w-1/2 mb-4" />
         <div className="flex justify-between items-center pt-2 border-t border-secondary/5">
-          <div className="h-6 bg-secondary/20 dark:bg-secondary/10 rounded w-1/4" />
-          <div className="h-9 bg-secondary/20 dark:bg-secondary/10 rounded-lg w-1/3" />
+          <div className="h-6 bg-secondary/20 rounded w-1/4" />
+          <div className="h-9 bg-secondary/20 rounded-lg w-1/3" />
         </div>
       </div>
     ))}
@@ -91,7 +91,6 @@ const Products = () => {
     useStore();
   const [debouncedSearchQuery, setDebouncedSearchQuery] = useState(searchQuery);
 
-  // Debounce search input to avoid filtering on every keystroke
   useEffect(() => {
     if (!searchQuery) {
       setDebouncedSearchQuery("");
@@ -106,7 +105,6 @@ const Products = () => {
     };
   }, [searchQuery]);
 
-  // Load products and categories on mount
   useEffect(() => {
     Promise.all([getProducts(), getCategories()])
       .then(([productsData, categoriesData]) => {
